@@ -13,7 +13,19 @@ class Breweries::Server < Sinatra::Application
   end
 
   get '/' do
-    @breweries = brewery_db.locations.all(locality: 'San Francisco')
+    # query = params[:query]
+    # page = params[:page] || 1
+    # per_page = BreweryDB::PaginatedCollection::BATCH_SIZE
+
+    # results = client.search.beers(q: query, p: page)
+    # count = results.count
+
+    # @beers = WillPaginate::Collection.create(page, per_page, count) do |pager|
+    #   pager.replace results.take(per_page)
+    # end
+
+    @brewery = brewery_db.breweries.find('OGHzdU')
+    @breweries = [brewery_db.breweries.all(established: 2006)]
     binding.pry
     erb :index
   end
