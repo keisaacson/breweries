@@ -1,5 +1,5 @@
 .DS_Store
-vendor/bundle
+vendor
 .bundle
 web/.env
 .env

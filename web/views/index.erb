@@ -1,5 +1,8 @@
 <h1>Test</h1>
-<p> <%= @brewery.name %> </p>
+<form action="/search" method="get">
+	<label for"postal">Search by postal code:</label>
+	<input type="text" name="postal">
+</form>
 <p> <%= @breweries.length %> </p>
 <% test = @breweries.map {|b| b.brewery.name} %>
 <p> <%= test %> </p>
