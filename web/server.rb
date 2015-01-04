@@ -40,7 +40,6 @@ class Breweries::Server < Sinatra::Application
     state = params["state"]
     @city = params["city"]
     @breweries = brewery_db.locations.all(region: state)
-    binding.pry
     erb :index
   end
 
