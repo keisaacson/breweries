@@ -24,8 +24,9 @@ class Breweries::Server < Sinatra::Application
     #   pager.replace results.take(per_page)
     # end
 
-    @brewery = brewery_db.breweries.find('OGHzdU')
-    @breweries = brewery_db.breweries.all(established: 2006)
+    @brewery = brewery_db.breweries.find('cJio9R')
+    # @breweries = brewery_db.breweries.all(established: 2006).to_a
+    @breweries = brewery_db.locations.all(locality: 'Chicago')
     binding.pry
     erb :index
   end
