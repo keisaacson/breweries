@@ -25,7 +25,7 @@ class Breweries::Server < Sinatra::Application
     # end
 
     @brewery = brewery_db.breweries.find('OGHzdU')
-    @breweries = [brewery_db.breweries.all(established: 2006)]
+    @breweries = brewery_db.breweries.all(established: 2006)
     binding.pry
     erb :index
   end

@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.brewerydb.com/v2/location/wXmTDU?key=API_KEY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - BreweryDB Ruby Gem 0.2.3
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      content-type:
+      - application/json
+      date:
+      - Mon, 31 Mar 2014 20:13:25 GMT
+      server:
+      - Apache/2.2.26 (Amazon)
+      vary:
+      - Accept-Encoding
+      x-powered-by:
+      - PHP/5.3.28
+      x-ratelimit-limit:
+      - Unlimited
+      x-ratelimit-remaining:
+      - Unlimited
+      content-length:
+      - '864'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"message":"READ ONLY MODE: Request Successful","data":{"id":"wXmTDU","name":"Main
+        Brewery","streetAddress":"563 Second Street","locality":"San Francisco","region":"California","postalCode":"94107","phone":"415-369-0900","hoursOfOperation":"Monday
+        - Thursday: 11:30am to 12:00am\r\nFriday & Saturday: 11:30am to 1:00am\r\nSunday:
+        10:00am to 12:00am","latitude":37.7824175,"longitude":-122.3925921,"isPrimary":"Y","inPlanning":"N","isClosed":"N","openToPublic":"Y","locationType":"brewpub","locationTypeDisplay":"Brewpub","countryIsoCode":"US","yearOpened":"2000","status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        02:41:43","updateDate":"2012-09-29 13:00:01","breweryId":"EdRcIs","brewery":{"id":"EdRcIs","name":"21st
+        Amendment Brewery","description":"The 21st Amendment Brewery offers a variety
+        of award winning house made brews and American grilled cuisine in a comfortable
+        loft like setting. Join us before and after Giants baseball games in our outdoor
+        beer garden. A great location for functions and parties in our semi-private
+        Brewers Loft. See you soon at the 21A!","website":"http:\/\/www.21st-amendment.com\/","established":"2000","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/EdRcIs\/upload_YmgSv3-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/EdRcIs\/upload_YmgSv3-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/EdRcIs\/upload_YmgSv3-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        02:41:43","updateDate":"2012-10-22 17:12:59"},"country":{"isoCode":"US","name":"UNITED
+        STATES","displayName":"United States","isoThree":"USA","numberCode":840,"createDate":"2012-01-03
+        02:41:33"}},"status":"success"}'
+    http_version: 
+  recorded_at: Mon, 31 Mar 2014 20:13:25 GMT
+recorded_with: VCR 2.4.0
