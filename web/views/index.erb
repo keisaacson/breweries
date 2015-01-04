@@ -1,8 +1,22 @@
 <h1>Test</h1>
-<form action="/search" method="get">
-	<label for"postal">Search by postal code:</label>
+<p>Search by</p>
+<form action="/postal" method="get">
+	<label for"postal">Zip code:</label>
 	<input type="text" name="postal">
+	<input type="Submit" name="Search">
 </form>
-<p> <%= @breweries.length %> </p>
-<% test = @breweries.map {|b| b.brewery.name} %>
-<p> <%= test %> </p>
+<p> or</p>
+<form action="/region" method="get">
+	<label for"city">City:</label>
+	<input type="text" name="city">
+	<label for"state">State:</label>
+	<input type="text" name="state">
+	<input type="Submit" name="Search">
+</form>
+<% if @city && @breweries %>
+	<% test = @breweries.select {|b| b.locality == @city}.map {|b| b.brewery.name} %>
+	<p> <%= test %> </p>
+<% elsif @breweries %>
+	<% test = @breweries.map {|b| b.brewery.name} %>
+	<p> <%= test %> </p>
+<% end %>

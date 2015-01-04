@@ -26,13 +26,20 @@ class Breweries::Server < Sinatra::Application
 
     # @brewery = brewery_db.breweries.find('cJio9R')
     # @breweries = brewery_db.breweries.all(established: 2006).to_a
-    @breweries = brewery_db.locations.all(postalCode: 78704)
+    # @breweries = brewery_db.locations.all(postalCode: 78704)
     erb :index
   end
 
-  get '/search' do
+  get '/postal' do
     postal = params["postal"]
     @breweries = brewery_db.locations.all(postalCode: postal)
+    erb :index
+  end
+
+  get '/region' do
+    state = params["state"]
+    @city = params["city"]
+    @breweries = brewery_db.locations.all(region: state)
     binding.pry
     erb :index
   end
